@@ -21,7 +21,10 @@ echo "Файл успешно скачан."
 echo "$content" | while IFS= read -r line; do
     if [ -n "$line" ]; then
         echo "Обрабатывается: $line"
-        echo "N" | kvas add "$line"
+        {
+            sleep 1
+            echo "N"
+        } | kvas add "$line"
     fi
 done
 
