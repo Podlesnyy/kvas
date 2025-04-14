@@ -20,7 +20,7 @@ echo "Файл успешно скачан."
 # Обработка каждой строки содержимого файла
 echo "$content" | while IFS= read -r line; do
     if [ -n "$line" ]; then
-        kvas add "$line"
+        echo "Y" | kvas add "$line"
     fi
 done
 
